@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Fungha Dimsum - Landing Page">
-    <title>Fungha Dimsum</title>
+    <meta name="description" content="Chi tiết chương trình khuyến mãi - Fungha Dimsum">
+    <title>Khuyến Mãi - Fungha Dimsum</title>
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/logo.png">
     <link rel="shortcut icon" type="image/png" href="images/logo.png">
@@ -19,7 +19,8 @@
         rel="stylesheet">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/style.css?v=20260314a">
+    <link rel="stylesheet" href="css/style.css?v=20260316a">
+    <link rel="stylesheet" href="css/promotion-detail.css?v=20260316a">
 </head>
 
 <body>
@@ -30,7 +31,7 @@
         <div class="header-pattern-top"></div>
         <div class="header-inner">
             <div class="logo">
-                <a href="#hero">
+                <a href="index.html#hero">
                     <img src="images/logo.png" alt="Fungha Dimsum Logo">
                     <div class="logo-title-wrap">
                         <span class="logo-text">Fungha Dimsum</span>
@@ -38,34 +39,33 @@
                             <span class="logo-sub-vn">Hương Vị Truyền Thống</span>
                         </div>
                     </div>
-                    <!-- Small decorative seal (removed) -->
                 </a>
             </div>
 
             <nav id="navbar">
                 <ul class="nav-links">
                     <li>
-                        <a href="#hero" class="active">
+                        <a href="index.html#hero">
                             <span class="nav-text">Trang Chủ</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#about">
+                        <a href="index.html#about">
                             <span class="nav-text">Giới thiệu</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#menu">
+                        <a href="index.html#menu">
                             <span class="nav-text">Thực Đơn</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#promotions">
+                        <a href="index.html#promotions" class="active">
                             <span class="nav-text">Khuyến Mại</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#contact">
+                        <a href="index.html#contact">
                             <span class="nav-text">Liên Hệ</span>
                         </a>
                     </li>
@@ -85,173 +85,19 @@
     <!-- Backdrop for mobile drawer -->
     <div id="nav-backdrop"></div>
 
-    <!-- Main Wrapper -->
-    <main id="main-content">
-
-        <!-- Trang 1: Hero / Home -->
-        <section id="hero" class="full-page hero-slider-section">
-            <div class="hero-slider" id="heroSliderContainer">
-                <!-- Dynamic: rendered from Google Sheets -->
-            </div>
-            <div class="hero-overlay"></div>
-
-            <!-- Slider Controls -->
-            <button class="slider-btn slider-prev" aria-label="Lùi lại">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="m15 18-6-6 6-6" />
-                </svg>
-            </button>
-            <button class="slider-btn slider-next" aria-label="Tiếp theo">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="m9 18 6-6-6-6" />
-                </svg>
-            </button>
-
-            <div class="slider-dots" id="heroDotsContainer">
-                <!-- Dynamic: rendered from Google Sheets -->
-            </div>
-        </section>
-
-        <!-- Trang 2: About -->
-        <section id="about" class="about-section">
-            <div class="about-container" id="aboutDynamicContainer">
-                <!-- Dynamic: rendered from Google Sheets (about_info, about_stats, about_features) -->
-            </div>
-        </section>
-
-        <!-- Trang 3: Menu -->
-        <section id="menu" class="menu-section">
-            <div class="container menu-container">
-                <!-- Section Title -->
-                <div class="menu-title-block">
-                    <div class="menu-title-ornament left"></div>
-                    <h2 class="menu-title">Thực Đơn Đặc Sắc</h2>
-                    <div class="menu-title-ornament right"></div>
-                </div>
-                <!-- Chinese Subtitle -->
-
-                <!-- Tabs Navigation -->
-                <div class="menu-tabs-wrapper">
-                    <ul class="menu-tabs" id="menuTabsContainer">
-                        <!-- Dynamic: rendered from Google Sheets -->
-                    </ul>
-                </div>
-
-                <!-- Tabs Content -->
-                <div class="menu-content" id="menuContentContainer">
-                    <!-- Dynamic: rendered from Google Sheets -->
+    <!-- Main Content -->
+    <main class="promo-detail-page">
+        <div class="promo-detail-main" id="promoDetailContainer">
+            <!-- Loading state -->
+            <div class="promo-detail-loading">
+                <p>Đang tải thông tin khuyến mãi...</p>
+                <div class="loader-dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </div>
-        </section>
-
-        <!-- Trang 4: Khuyến Mãi -->
-        <section id="promotions" class="promo-section">
-            <!-- Decorative background elements -->
-            <div class="promo-bg-pattern"></div>
-            <div class="promo-lantern promo-lantern-left"></div>
-            <div class="promo-lantern promo-lantern-right"></div>
-
-            <div class="promo-wrapper">
-                <!-- Section Title -->
-                <div class="promo-title-block">
-                    <div class="promo-title-ornament left"></div>
-                    <h2 class="promo-title">Chương Trình Khuyến Mại</h2>
-                    <div class="promo-title-ornament right"></div>
-                </div>
-
-
-                <!-- Carousel Container -->
-                <div class="promo-carousel-wrapper">
-                    <!-- Prev Button -->
-                    <button class="promo-nav-btn promo-prev" aria-label="Xem khuyến mãi trước">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="m15 18-6-6 6-6" />
-                        </svg>
-                    </button>
-
-                    <!-- Carousel Track -->
-                    <div class="promo-carousel-viewport">
-                        <div class="promo-carousel-track" id="promoTrack">
-                            <!-- Dynamic: rendered from Google Sheets -->
-                        </div>
-                    </div>
-
-                    <!-- Next Button -->
-                    <button class="promo-nav-btn promo-next" aria-label="Xem khuyến mãi tiếp">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="m9 18 6-6-6-6" />
-                        </svg>
-                    </button>
-                </div>
-
-                <!-- Pagination Dots -->
-                <div class="promo-dots" id="promoDots">
-                    <!-- Dynamic: rendered from Google Sheets -->
-                </div>
-            </div>
-        </section>
-
-        <!-- Trang 5: Contact -->
-        <section id="contact" class="full-page contact-section">
-            <!-- Decorative wave top -->
-            <div class="contact-wave-top"></div>
-
-            <div class="contact-wrapper">
-                <!-- Section Title -->
-                <div class="contact-title-block">
-                    <div class="contact-title-ornament left"></div>
-                    <h2 class="contact-title">Thông Tin Liên Hệ</h2>
-                    <div class="contact-title-ornament right"></div>
-                </div>
-
-                <!-- Hotline -->
-                <div class="contact-hotline">
-                    <span class="hotline-icon">📞</span>
-                    <div class="hotline-info">
-                        <span class="hotline-label">HOTLINE:</span>
-                        <a href="tel:0336891298" class="hotline-number" id="hotlineNumber">033 689 1298</a>
-                    </div>
-                </div>
-
-                <!-- Main Content: 2 columns -->
-                <div class="contact-content">
-                    <!-- Left: Branch List -->
-                    <div class="contact-branches">
-                        <h3 class="branches-heading">Danh Sách Các Cơ Sở Tại Hà Nội:</h3>
-
-                        <div class="branches-list" id="branchesContainer">
-                            <!-- Dynamic: rendered from Google Sheets -->
-                        </div>
-                    </div>
-
-                    <!-- Right: Google Maps -->
-                    <div class="contact-map-container">
-                        <div class="map-frame">
-                            <iframe id="contact-map"
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.451768522772!2d105.85807472540226!3d21.014602200973357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab551f6d7397%3A0xade05ef4ec6ae0f6!2zRnVuZ2hhIERpbXN1bSAtIDEyIE5ndXnhu4VuIEPDtG5nIFRy4bup!5e0!3m2!1svi!2svn!4v1"
-                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade">
-                            </iframe>
-                        </div>
-                        <div class="map-branch-label" id="map-branch-label">
-                            <span class="map-label-icon">📍</span>
-                            <span class="map-label-text">Fungha Dimsum - Nguyễn Công Trứ</span>
-                            <a class="map-label-link" id="map-gg-link"
-                                href="https://maps.google.com/?q=21.0146,105.8581" target="_blank" rel="noopener"
-                                title="Mở Google Maps">⇗</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Decorative wave bottom -->
-            <div class="contact-wave-bottom"></div>
-        </section>
-
+        </div>
     </main>
 
     <!-- ========== FOOTER ========== -->
@@ -289,8 +135,7 @@
                 </div>
             </div>
 
-
-            <!-- Column 3: Contact & Social -->
+            <!-- Column 2: Contact & Social -->
             <div class="footer-col footer-social-col">
                 <h4 class="footer-col-title">Kết Nối Với Chúng Tôi</h4>
                 <div class="footer-contact-info">
@@ -351,58 +196,61 @@
         </div>
     </footer>
 
-    <!-- ========== FLOATING BÁNH BAO BUTTON ========== -->
-    <a href="#contact" class="bao-float-btn" id="baoBaoBtn" aria-label="Đi tới trang Liên Hệ">
-        <div class="bao-steam">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <!-- Inline SVG bánh bao - no background -->
-        <svg class="bao-img" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <!-- Shadow -->
-            <ellipse cx="50" cy="92" rx="26" ry="5" fill="rgba(0,0,0,0.18)" />
-            <!-- Body -->
-            <ellipse cx="50" cy="62" rx="34" ry="28" fill="url(#baoGrad)" />
-            <!-- Top dome -->
-            <ellipse cx="50" cy="50" rx="28" ry="22" fill="url(#baoTopGrad)" />
-            <!-- Pleats -->
-            <path d="M50 30 Q44 36 46 42 Q50 38 54 42 Q56 36 50 30Z" fill="url(#pleatGrad)" opacity="0.7" />
-            <path d="M50 30 Q56 33 57 40 Q53 37 50 38 Q47 37 43 40 Q44 33 50 30Z" fill="rgba(255,255,255,0.5)" />
-            <!-- Highlight -->
-            <ellipse cx="41" cy="44" rx="8" ry="5" fill="rgba(255,255,255,0.45)" transform="rotate(-20,41,44)" />
-            <ellipse cx="44" cy="42" rx="3" ry="2" fill="rgba(255,255,255,0.7)" transform="rotate(-20,44,42)" />
-            <!-- Top knot -->
-            <ellipse cx="50" cy="29" rx="5" ry="4" fill="url(#knotGrad)" />
-            <ellipse cx="50" cy="27" rx="3" ry="2" fill="rgba(255,255,255,0.6)" />
-            <defs>
-                <radialGradient id="baoGrad" cx="45%" cy="40%" r="60%">
-                    <stop offset="0%" stop-color="#FFFEF8" />
-                    <stop offset="60%" stop-color="#F5F0E8" />
-                    <stop offset="100%" stop-color="#E8DDD0" />
-                </radialGradient>
-                <radialGradient id="baoTopGrad" cx="40%" cy="35%" r="65%">
-                    <stop offset="0%" stop-color="#FFFFFF" />
-                    <stop offset="55%" stop-color="#F8F3EA" />
-                    <stop offset="100%" stop-color="#EDE4D8" />
-                </radialGradient>
-                <radialGradient id="pleatGrad" cx="50%" cy="50%" r="60%">
-                    <stop offset="0%" stop-color="#EDE4D8" />
-                    <stop offset="100%" stop-color="#D5C8B8" />
-                </radialGradient>
-                <radialGradient id="knotGrad" cx="40%" cy="35%" r="65%">
-                    <stop offset="0%" stop-color="#FFFFFF" />
-                    <stop offset="100%" stop-color="#DEDAD2" />
-                </radialGradient>
-            </defs>
-        </svg>
-        <div class="bao-tooltip">📞 Liên Hệ Ngay</div>
-    </a>
-
     <!-- Scripts -->
     <script src="js/sheets-fetcher.js"></script>
-    <script src="js/data-renderer.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/promotion-detail.js"></script>
+    <script>
+        // Mobile menu toggle (simplified for detail page)
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.querySelector('#hamburger');
+            const navbar = document.querySelector('#navbar');
+            const navLinks = document.querySelectorAll('#navbar .nav-links a');
+            const backdrop = document.querySelector('#nav-backdrop');
+
+            function toggleMenu(open) {
+                hamburger.classList.toggle('open', open);
+                navbar.classList.toggle('nav-open', open);
+                hamburger.setAttribute('aria-expanded', open);
+                document.body.style.overflow = open ? 'hidden' : '';
+                if (backdrop) {
+                    if (open) {
+                        backdrop.style.display = 'block';
+                        requestAnimationFrame(() => backdrop.classList.add('active'));
+                    } else {
+                        backdrop.classList.remove('active');
+                        backdrop.addEventListener('transitionend', () => {
+                            backdrop.style.display = 'none';
+                        }, { once: true });
+                    }
+                }
+            }
+
+            hamburger.addEventListener('click', () => {
+                const isOpen = navbar.classList.contains('nav-open');
+                toggleMenu(!isOpen);
+            });
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => toggleMenu(false));
+            });
+
+            if (backdrop) {
+                backdrop.addEventListener('click', () => toggleMenu(false));
+            }
+
+            // Sticky header
+            const header = document.querySelector('#header');
+            function updateHeader() {
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            }
+            window.addEventListener('scroll', updateHeader);
+            setTimeout(updateHeader, 100);
+        });
+    </script>
 </body>
 
 </html>

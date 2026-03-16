@@ -1,0 +1,686 @@
+/* ================================================
+   PROMOTION DETAIL PAGE — Horizontal Split Layout
+   ================================================
+   Layout: Content LEFT + Poster RIGHT (sticky)
+   Mobile: Stacked vertically (image top, content below)
+   ================================================ */
+
+/* --- Page Layout --- */
+.promo-detail-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.promo-detail-main {
+    flex: 1;
+    padding-top: 90px;
+}
+
+/* --- Breadcrumb / Back Nav --- */
+.promo-detail-breadcrumb {
+    max-width: 1300px;
+    width: 92%;
+    margin: 20px auto 0;
+    display: flex;
+    align-items: center;
+}
+
+.promo-detail-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    color: rgba(255, 215, 0, 0.75);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 215, 0, 0.15);
+    background: rgba(255, 215, 0, 0.04);
+    transition: all 0.25s ease-out;
+    cursor: pointer;
+}
+
+.promo-detail-back:hover {
+    color: #FFD700;
+    background: rgba(255, 215, 0, 0.1);
+    border-color: rgba(255, 215, 0, 0.35);
+    transform: translateX(-2px);
+}
+
+.promo-detail-back svg {
+    transition: transform 0.25s ease-out;
+    flex-shrink: 0;
+}
+
+.promo-detail-back:hover svg {
+    transform: translateX(-3px);
+}
+
+/* ================================================
+   HORIZONTAL SPLIT — Two Column Layout
+   ================================================ */
+.promo-detail-split {
+    max-width: 1300px;
+    width: 92%;
+    margin: 28px auto 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+}
+
+/* --- LEFT COLUMN: Content --- */
+.promo-detail-left {
+    animation: fadeSlideUp 0.7s ease-out both;
+}
+
+/* --- RIGHT COLUMN: Poster --- */
+.promo-detail-right {
+    position: sticky;
+    top: 110px;
+    animation: fadeSlideRight 0.8s ease-out both;
+}
+
+@keyframes fadeSlideRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* --- Poster Frame --- */
+.promo-detail-poster-wrap {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.45),
+        0 0 40px rgba(255, 215, 0, 0.06);
+}
+
+/* Gold frame border */
+.promo-detail-poster-wrap::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border: 2px solid rgba(255, 215, 0, 0.25);
+    border-radius: 20px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Inner ornament frame */
+.promo-detail-poster-wrap::after {
+    content: '';
+    position: absolute;
+    inset: 7px;
+    border: 1px solid rgba(255, 215, 0, 0.1);
+    border-radius: 15px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.promo-detail-poster {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    background: rgba(20, 8, 4, 1);
+    border-radius: 20px;
+}
+
+/* ================================================
+   TITLE
+   ================================================ */
+.promo-detail-title-block {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.promo-detail-title-ornament {
+    height: 2px;
+    width: 50px;
+    flex-shrink: 0;
+    border-radius: 2px;
+    position: relative;
+}
+
+.promo-detail-title-ornament.left {
+    background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.6));
+}
+
+.promo-detail-title-ornament.right {
+    background: linear-gradient(270deg, transparent, rgba(255, 215, 0, 0.6));
+}
+
+.promo-detail-title-ornament::after {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: #FFD700;
+    border-radius: 1px;
+    transform: rotate(45deg);
+    top: -1.5px;
+}
+
+.promo-detail-title-ornament.left::after {
+    left: 0;
+}
+
+.promo-detail-title-ornament.right::after {
+    right: 0;
+}
+
+.promo-detail-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.9rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    background: linear-gradient(135deg, #FFD700 0%, #FFF8DC 30%, #E3B04B 60%, #FFD700 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+    line-height: 1.3;
+    animation: shimmerGold 4s linear infinite;
+}
+
+@keyframes shimmerGold {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 200% 50%; }
+}
+
+/* ================================================
+   INFO CARD — Premium Glass Card
+   ================================================ */
+.promo-detail-card {
+    position: relative;
+    background: linear-gradient(160deg,
+        rgba(35, 12, 8, 0.92) 0%,
+        rgba(25, 8, 5, 0.95) 50%,
+        rgba(35, 12, 8, 0.92) 100%);
+    border-radius: 20px;
+    padding: 36px;
+    border: 1.5px solid rgba(255, 215, 0, 0.2);
+    box-shadow:
+        0 12px 40px rgba(0, 0, 0, 0.35),
+        0 0 0 1px rgba(255, 215, 0, 0.05),
+        inset 0 1px 0 rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    overflow: hidden;
+}
+
+/* Subtle radial glow */
+.promo-detail-card::before {
+    content: '';
+    position: absolute;
+    top: -40%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 60%;
+    background: radial-gradient(ellipse, rgba(255, 215, 0, 0.04) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Gold corner accents */
+.promo-detail-card-corner {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.promo-detail-card-corner::before,
+.promo-detail-card-corner::after {
+    content: '';
+    position: absolute;
+    background: rgba(255, 215, 0, 0.4);
+}
+
+.promo-detail-card-corner.top-left { top: 10px; left: 10px; }
+.promo-detail-card-corner.top-left::before { top: 0; left: 0; width: 24px; height: 2px; }
+.promo-detail-card-corner.top-left::after { top: 0; left: 0; width: 2px; height: 24px; }
+
+.promo-detail-card-corner.top-right { top: 10px; right: 10px; }
+.promo-detail-card-corner.top-right::before { top: 0; right: 0; width: 24px; height: 2px; }
+.promo-detail-card-corner.top-right::after { top: 0; right: 0; width: 2px; height: 24px; }
+
+.promo-detail-card-corner.bottom-left { bottom: 10px; left: 10px; }
+.promo-detail-card-corner.bottom-left::before { bottom: 0; left: 0; width: 24px; height: 2px; }
+.promo-detail-card-corner.bottom-left::after { bottom: 0; left: 0; width: 2px; height: 24px; }
+
+.promo-detail-card-corner.bottom-right { bottom: 10px; right: 10px; }
+.promo-detail-card-corner.bottom-right::before { bottom: 0; right: 0; width: 24px; height: 2px; }
+.promo-detail-card-corner.bottom-right::after { bottom: 0; right: 0; width: 2px; height: 24px; }
+
+/* Card content z-index */
+.promo-detail-card > *:not(.promo-detail-card-corner) {
+    position: relative;
+    z-index: 1;
+}
+
+/* --- Description --- */
+.promo-detail-desc {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.02rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.85;
+    margin-bottom: 28px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid rgba(255, 215, 0, 0.1);
+    letter-spacing: 0.2px;
+}
+
+/* ================================================
+   INFO GRID
+   ================================================ */
+.promo-detail-info-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-bottom: 32px;
+}
+
+.promo-detail-info-item {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    padding: 16px;
+    border-radius: 14px;
+    background: rgba(255, 215, 0, 0.03);
+    border: 1px solid rgba(255, 215, 0, 0.08);
+    transition: all 0.25s ease-out;
+}
+
+.promo-detail-info-item:hover {
+    background: rgba(255, 215, 0, 0.06);
+    border-color: rgba(255, 215, 0, 0.18);
+}
+
+.promo-detail-info-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.12), rgba(196, 33, 41, 0.08));
+    border: 1px solid rgba(255, 215, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #FFD700;
+}
+
+.promo-detail-info-icon svg {
+    width: 18px;
+    height: 18px;
+}
+
+.promo-detail-info-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.promo-detail-info-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: #FFD700;
+    margin-bottom: 4px;
+    display: block;
+}
+
+.promo-detail-info-value {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.78);
+    line-height: 1.6;
+}
+
+/* ================================================
+   CTA BUTTON
+   ================================================ */
+.promo-detail-cta-wrap {
+    text-align: center;
+    padding-top: 8px;
+}
+
+.promo-detail-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 44px;
+    background: linear-gradient(135deg, #C42129 0%, #9B1B1B 50%, #C42129 100%);
+    background-size: 200% auto;
+    border: 2px solid rgba(255, 215, 0, 0.35);
+    border-radius: 60px;
+    color: #FFD700;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    position: relative;
+    overflow: hidden;
+    box-shadow:
+        0 8px 24px rgba(196, 33, 41, 0.3),
+        0 0 0 1px rgba(196, 33, 41, 0.2);
+}
+
+.promo-detail-cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    pointer-events: none;
+}
+
+.promo-detail-cta:hover {
+    transform: translateY(-2px);
+    box-shadow:
+        0 14px 40px rgba(196, 33, 41, 0.4),
+        0 0 30px rgba(255, 215, 0, 0.12),
+        0 0 0 1px rgba(255, 215, 0, 0.2);
+    border-color: rgba(255, 215, 0, 0.6);
+    background-position: 100% 0;
+}
+
+.promo-detail-cta:hover::before {
+    animation: ctaShimmer 0.6s ease-out;
+}
+
+@keyframes ctaShimmer {
+    0% { left: -60%; }
+    100% { left: 120%; }
+}
+
+.promo-detail-cta:active {
+    transform: translateY(0);
+}
+
+.promo-detail-cta span,
+.promo-detail-cta svg {
+    position: relative;
+    z-index: 1;
+}
+
+.promo-detail-cta svg {
+    transition: transform 0.25s ease-out;
+}
+
+.promo-detail-cta:hover svg {
+    transform: translateX(3px);
+}
+
+/* ================================================
+   LOADING STATE
+   ================================================ */
+.promo-detail-loading {
+    text-align: center;
+    padding: 120px 20px;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+}
+
+.promo-detail-loading .loader-dots {
+    display: inline-flex;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.promo-detail-loading .loader-dots span {
+    width: 8px;
+    height: 8px;
+    background: #FFD700;
+    border-radius: 50%;
+    animation: loaderPulse 1.2s ease-in-out infinite;
+}
+
+.promo-detail-loading .loader-dots span:nth-child(2) {
+    animation-delay: 0.15s;
+}
+
+.promo-detail-loading .loader-dots span:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+@keyframes loaderPulse {
+    0%, 100% { opacity: 0.2; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1.1); }
+}
+
+/* ================================================
+   ERROR STATE
+   ================================================ */
+.promo-detail-error {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.promo-detail-error-icon {
+    margin-bottom: 24px;
+    color: rgba(255, 215, 0, 0.4);
+}
+
+.promo-detail-error-icon svg {
+    width: 56px;
+    height: 56px;
+}
+
+.promo-detail-error-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #FFD700;
+    margin-bottom: 12px;
+}
+
+.promo-detail-error-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.55);
+    margin-bottom: 28px;
+    line-height: 1.6;
+}
+
+.promo-detail-error-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 28px;
+    background: rgba(255, 215, 0, 0.06);
+    border: 1px solid rgba(255, 215, 0, 0.25);
+    border-radius: 30px;
+    color: #FFD700;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.25s ease-out;
+    cursor: pointer;
+}
+
+.promo-detail-error-link:hover {
+    background: rgba(255, 215, 0, 0.12);
+    border-color: rgba(255, 215, 0, 0.45);
+    transform: translateX(-2px);
+}
+
+/* ================================================
+   ANIMATIONS
+   ================================================ */
+@keyframes fadeSlideUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ================================================
+   REDUCED MOTION
+   ================================================ */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ================================================
+   RESPONSIVE — Tablet (stack vertically)
+   ================================================ */
+@media (max-width: 1024px) {
+    .promo-detail-main {
+        padding-top: 80px;
+    }
+
+    .promo-detail-split {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    /* On tablet/mobile: image on TOP, content below */
+    .promo-detail-right {
+        position: relative;
+        top: auto;
+        order: -1;
+        max-width: 600px;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .promo-detail-left {
+        order: 1;
+    }
+
+    .promo-detail-title {
+        font-size: 1.6rem;
+        letter-spacing: 2px;
+    }
+
+    .promo-detail-card {
+        padding: 30px 24px;
+    }
+
+    .promo-detail-title-block {
+        justify-content: center;
+    }
+}
+
+/* ================================================
+   RESPONSIVE — Mobile
+   ================================================ */
+@media (max-width: 768px) {
+    .promo-detail-main {
+        padding-top: 70px;
+    }
+
+    .promo-detail-breadcrumb {
+        margin-top: 12px;
+        width: 95%;
+    }
+
+    .promo-detail-back {
+        padding: 8px 16px;
+        font-size: 0.82rem;
+    }
+
+    .promo-detail-split {
+        width: 95%;
+        margin: 16px auto 36px;
+        gap: 20px;
+    }
+
+    .promo-detail-right {
+        max-width: 100%;
+    }
+
+    .promo-detail-poster-wrap {
+        border-radius: 14px;
+    }
+
+    .promo-detail-poster-wrap::before {
+        border-radius: 14px;
+    }
+
+    .promo-detail-poster-wrap::after {
+        border-radius: 10px;
+        inset: 5px;
+    }
+
+    .promo-detail-title-block {
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .promo-detail-title {
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+    }
+
+    .promo-detail-title-ornament {
+        width: 24px;
+    }
+
+    .promo-detail-card {
+        padding: 22px 16px;
+        border-radius: 14px;
+    }
+
+    .promo-detail-card-corner {
+        display: none;
+    }
+
+    .promo-detail-desc {
+        font-size: 0.92rem;
+        line-height: 1.7;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+    }
+
+    .promo-detail-info-item {
+        padding: 14px;
+    }
+
+    .promo-detail-info-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .promo-detail-info-icon svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .promo-detail-cta {
+        padding: 14px 32px;
+        font-size: 0.9rem;
+        letter-spacing: 2px;
+        width: 100%;
+        justify-content: center;
+    }
+}

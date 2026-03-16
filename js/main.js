@@ -123,6 +123,17 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+});
+
+/* ================================================
+   DYNAMIC CONTENT INITIALIZATION
+   ================================================
+   Waits for 'data-rendered' event from data-renderer.js
+   before initializing interactive features that depend
+   on dynamically loaded DOM elements.
+   ================================================ */
+document.addEventListener('data-rendered', () => {
+    console.log('Dynamic content rendered — initializing interactive features...');
 
     // --- Hero Slider ---
     const heroSection = document.querySelector('#hero');
