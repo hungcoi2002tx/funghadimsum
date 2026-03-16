@@ -5,8 +5,11 @@
 /* --- Section base --- */
 .contact-section {
     position: relative;
-    background: transparent;
-    padding: 80px 0 40px !important;
+    background: linear-gradient(180deg,
+            rgba(120, 15, 15, 0.2) 0%,
+            rgba(160, 25, 25, 0.15) 30%,
+            rgba(120, 15, 15, 0.2) 100%);
+    padding: 60px 0 40px !important;
     min-height: 100vh;
     min-height: 100dvh;
     scroll-snap-align: start;
@@ -37,8 +40,8 @@
     z-index: 2;
     width: 90%;
     max-width: 1200px;
-    margin: auto;
-    padding: 60px 40px 80px;
+    margin: 0 auto;
+    padding: 40px 40px 80px;
 }
 
 /* --- Light Panel pseudo-element disabled --- */
@@ -499,7 +502,7 @@
 /* --- Contact Responsive: Tablet --- */
 @media (max-width: 1024px) {
     .contact-wrapper {
-        padding: 50px 30px 60px;
+        padding: 36px 30px 60px;
         border-radius: 20px;
     }
 
@@ -527,7 +530,7 @@
     }
 
     .contact-wrapper {
-        padding: 36px 16px 44px;
+        padding: 28px 16px 44px;
         border-radius: 18px;
     }
 
@@ -649,7 +652,7 @@
     }
 
     .contact-wrapper {
-        padding: 28px 10px 36px;
+        padding: 20px 10px 36px;
         border-radius: 14px;
     }
 

@@ -4,7 +4,7 @@
 
 .about-section {
     position: relative;
-    padding: 100px 20px 40px;
+    padding: 60px 20px 40px;
     background: transparent;
     display: flex;
     justify-content: center;
@@ -18,10 +18,10 @@
 .about-container {
     max-width: var(--container-max-width, 1200px);
     width: 100%;
-    margin: auto;
+    margin: 0 auto;
     position: relative;
     z-index: 2;
-    padding: 60px 40px 80px;
+    padding: 40px 40px 80px;
 }
 
 /* --- Title (matches Contact section exactly) --- */
@@ -308,7 +308,7 @@
 /* --- About Responsive: Tablet --- */
 @media (max-width: 1024px) {
     .about-container {
-        padding: 50px 30px 60px;
+        padding: 36px 30px 60px;
     }
 
     .about-title {
@@ -332,7 +332,7 @@
 /* --- About Responsive: Mobile --- */
 @media (max-width: 768px) {
     .about-section {
-        padding: 80px 16px;
+        padding: 60px 16px;
         height: auto;
         min-height: auto;
         scroll-snap-align: none;
@@ -340,7 +340,7 @@
     }
 
     .about-container {
-        padding: 36px 16px 44px;
+        padding: 28px 16px 44px;
         max-width: 100%;
         overflow: hidden;
     }
@@ -411,11 +411,11 @@
 /* --- About Responsive: Small Mobile --- */
 @media (max-width: 480px) {
     .about-section {
-        padding: 70px 10px 40px;
+        padding: 50px 10px 40px;
     }
 
     .about-container {
-        padding: 28px 10px 36px;
+        padding: 20px 10px 36px;
     }
 
     .about-title {
