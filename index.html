@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fungha Dimsum - Landing Page">
+    <title>Fungha Dimsum</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="shortcut icon" type="image/png" href="images/logo.png">
+    <link rel="apple-touch-icon" href="images/logo.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@800;900&family=Rubik:ital,wght@0,700;0,900;1,700&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css?v=20260314a">
+</head>
+
+<body>
+
+    <!-- ========== HEADER / NAVIGATION ========== -->
+    <header id="header" class="chinese-theme-header">
+        <!-- Optional Decorative Top Border -->
+        <div class="header-pattern-top"></div>
+        <div class="header-inner">
+            <div class="logo">
+                <a href="#hero">
+                    <img src="images/logo.png" alt="Fungha Dimsum Logo">
+                    <div class="logo-title-wrap">
+                        <span class="logo-text">Fungha Dimsum</span>
+                        <div class="logo-subtitle">
+                            <span class="logo-sub-vn">Hương Vị Truyền Thống</span>
+                        </div>
+                    </div>
+                    <!-- Small decorative seal (removed) -->
+                </a>
+            </div>
+
+            <nav id="navbar">
+                <ul class="nav-links">
+                    <li>
+                        <a href="#hero" class="active">
+                            <span class="nav-text">Trang Chủ</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#about">
+                            <span class="nav-text">Giới thiệu</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#menu">
+                            <span class="nav-text">Thực Đơn</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#promotions">
+                            <span class="nav-text">Khuyến Mại</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact">
+                            <span class="nav-text">Liên Hệ</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Hamburger Button (Mobile) -->
+            <button class="hamburger chinese-hamburger" id="hamburger" aria-label="Mở menu" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+        <div class="header-pattern-bottom"></div>
+    </header>
+
+    <!-- Backdrop for mobile drawer -->
+    <div id="nav-backdrop"></div>
+
+    <!-- Main Wrapper -->
+    <main id="main-content">
+
+        <!-- Trang 1: Hero / Home -->
+        <section id="hero" class="full-page hero-slider-section">
+            <div class="hero-slider">
+                <div class="hero-slide active"
+                    data-desktop="images/home1.jpg"
+                    data-mobile="images/home1-mobile.jpg"
+                    style="background-image: url('images/home1.jpg');"></div>
+                <div class="hero-slide"
+                    data-desktop="images/home2.jpg"
+                    data-mobile="images/home2-mobile.jpg"
+                    style="background-image: url('images/home2.jpg');"></div>
+                <div class="hero-slide"
+                    data-desktop="images/home3.jpg"
+                    data-mobile="images/home3-mobile.jpg"
+                    style="background-image: url('images/home3.jpg');"></div>
+            </div>
+            <div class="hero-overlay"></div>
+
+            <!-- Slider Controls -->
+            <button class="slider-btn slider-prev" aria-label="Lùi lại">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m15 18-6-6 6-6" />
+                </svg>
+            </button>
+            <button class="slider-btn slider-next" aria-label="Tiếp theo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m9 18 6-6-6-6" />
+                </svg>
+            </button>
+
+            <div class="slider-dots">
+                <span class="slider-dot active" data-index="0"></span>
+                <span class="slider-dot" data-index="1"></span>
+                <span class="slider-dot" data-index="2"></span>
+            </div>
+        </section>
+
+        <!-- Trang 2: About -->
+        <section id="about" class="about-section">
+            <div class="about-container">
+                <!-- Section Title -->
+                <div class="about-title-block">
+                    <div class="about-title-ornament left"></div>
+                    <h2 class="about-title">Về Chúng Tôi</h2>
+                    <div class="about-title-ornament right"></div>
+                </div>
+
+                <!-- Hero Image + Intro -->
+                <div class="about-hero-row">
+                    <div class="about-image-column">
+                        <div class="about-image-wrapper">
+                            <img src="images/home1.jpg" alt="FungHa Dimsum - Không gian nhà hàng" class="about-image">
+                        </div>
+                    </div>
+                    <div class="about-intro-column">
+                        <h3 class="about-subtitle">Fungha Dimsum</h3>
+
+                        <p class="about-intro-text">
+                            Fungha Dimsum mang đến hương vị dimsum truyền thống, được chế biến tỉ mỉ từ những nguyên
+                            liệu tươi ngon nhất. Với không gian ấm cúng mang đậm phong cách truyền thống, chúng tôi tự
+                            hào
+                            phục vụ thực khách những món ăn đặc sắc, giữ trọn tinh hoa ẩm thực.
+                        </p>
+                        <div class="about-stats">
+                            <div class="about-stat-item">
+                                <span class="about-stat-number">4</span>
+                                <span class="about-stat-label">Chi Nhánh</span>
+                            </div>
+                            <div class="about-stat-divider"></div>
+                            <div class="about-stat-item">
+                                <span class="about-stat-number">50+</span>
+                                <span class="about-stat-label">Món Dimsum</span>
+                            </div>
+                            <div class="about-stat-divider"></div>
+                            <div class="about-stat-item">
+                                <span class="about-stat-number">100%</span>
+                                <span class="about-stat-label">Tươi Ngon</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature Cards -->
+                <div class="about-features">
+                    <div class="about-feature-card">
+                        <div class="about-feature-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFD700"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                                <path d="M2 17l10 5 10-5" />
+                                <path d="M2 12l10 5 10-5" />
+                            </svg>
+                        </div>
+                        <h4 class="about-feature-title">Nguyên Liệu Tươi Ngon</h4>
+                        <p class="about-feature-desc">Chúng tôi lựa chọn kỹ lưỡng từng nguyên liệu, đảm bảo độ tươi ngon
+                            và chất lượng cao nhất cho mỗi món ăn.</p>
+                    </div>
+                    <div class="about-feature-card">
+                        <div class="about-feature-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFD700"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                            </svg>
+                        </div>
+                        <h4 class="about-feature-title">Chế Biến Tỉ Mỉ</h4>
+                        <p class="about-feature-desc">Mỗi chiếc dimsum được chế biến thủ công bởi đội ngũ đầu bếp giàu
+                            kinh nghiệm, giữ trọn hương vị truyền thống.</p>
+                    </div>
+                    <div class="about-feature-card">
+                        <div class="about-feature-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFD700"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10" />
+                                <path d="M12 6v6l4 2" />
+                            </svg>
+                        </div>
+                        <h4 class="about-feature-title">Phục Vụ Tận Tâm</h4>
+                        <p class="about-feature-desc">Không gian ấm cúng, phong cách phục vụ chuyên nghiệp, mang đến
+                            trải nghiệm ẩm thực đẳng cấp cho thực khách.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trang 3: Menu -->
+        <section id="menu" class="menu-section">
+            <div class="container menu-container">
+                <!-- Section Title -->
+                <div class="menu-title-block">
+                    <div class="menu-title-ornament left"></div>
+                    <h2 class="menu-title">Thực Đơn Đặc Sắc</h2>
+                    <div class="menu-title-ornament right"></div>
+                </div>
+                <!-- Chinese Subtitle -->
+
+                <!-- Tabs Navigation -->
+                <div class="menu-tabs-wrapper">
+                    <ul class="menu-tabs">
+                        <li class="menu-tab active" data-target="tab-dimsum">
+                            <img src="images/banh_bao.svg" alt="Dimsum Hấp" class="tab-icon-img">
+                            <span class="tab-text">DIMSUM HẤP</span>
+                        </li>
+                        <li class="menu-tab" data-target="tab-chien">
+                            <img src="images/banh_bao.svg" alt="Dimsum Chiên" class="tab-icon-img">
+                            <span class="tab-text">DIMSUM CHIÊN</span>
+                        </li>
+                        <li class="menu-tab" data-target="tab-monchinh">
+                            <img src="images/banh_bao.svg" alt="Món Chính" class="tab-icon-img">
+                            <span class="tab-text">MÓN CHÍNH</span>
+                        </li>
+                        <li class="menu-tab" data-target="tab-mi">
+                            <img src="images/banh_bao.svg" alt="Cơm / Mỳ" class="tab-icon-img">
+                            <span class="tab-text">CƠM / MỲ</span>
+                        </li>
+                        <li class="menu-tab" data-target="tab-trangmieng">
+                            <img src="images/banh_bao.svg" alt="Tráng Miệng" class="tab-icon-img">
+                            <span class="tab-text">TRÁNG MIỆNG</span>
+                        </li>
+                        <li class="menu-tab" data-target="tab-douong">
+                            <img src="images/banh_bao.svg" alt="Thức Uống" class="tab-icon-img">
+                            <span class="tab-text">THỨC UỐNG</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Tabs Content -->
+                <div class="menu-content">
+                    <!-- DIMSUM PANE (Active) -->
+                    <div class="menu-pane active" id="tab-dimsum">
+                        <div class="menu-grid">
+                            <!-- Item 1 -->
+                            <div class="menu-item">
+                                <div class="menu-item-img-wrap">
+                                    <img src="images/banh_bao.svg" alt="Há Cảo Tôm Tươi" class="menu-item-img"
+                                        loading="lazy">
+                                </div>
+                                <h3 class="menu-item-name">Há Cảo Tôm Tươi</h3>
+                                <div class="menu-item-price">68.000đ</div>
+                            </div>
+                            <!-- Item 2 -->
+                            <div class="menu-item">
+                                <div class="menu-item-img-wrap">
+                                    <img src="images/banh_bao.svg" alt="Xíu Mại Tôm Thịt" class="menu-item-img"
+                                        loading="lazy">
+                                </div>
+                                <h3 class="menu-item-name">Xíu Mại Tôm Thịt</h3>
+                                <div class="menu-item-price">65.000đ</div>
+                            </div>
+                            <!-- Item 3 -->
+                            <div class="menu-item">
+                                <div class="menu-item-img-wrap">
+                                    <img src="images/banh_bao.svg" alt="Há Cảo Ngọc Bích" class="menu-item-img"
+                                        loading="lazy">
+                                </div>
+                                <h3 class="menu-item-name">Há Cảo Ngọc Bích</h3>
+                                <div class="menu-item-price">72.000đ</div>
+                            </div>
+                            <!-- Item 4 -->
+                            <div class="menu-item">
+                                <div class="menu-item-img-wrap">
+                                    <img src="images/banh_bao.svg" alt="Sò Điệp Thượng Hạng" class="menu-item-img"
+                                        loading="lazy">
+                                </div>
+                                <h3 class="menu-item-name">Sò Điệp Thượng Hạng</h3>
+                                <div class="menu-item-price">85.000đ</div>
+                            </div>
+                            <!-- Hàng 2 -->
+                            <!-- Item 5 -->
+                            <div class="menu-item">
+                                <div class="menu-item-img-wrap">
+                                    <img src="images/banh_bao.svg" alt="Bánh Bao Xá Xíu" class="menu-item-img"
+                                        loading="lazy">
+                                </div>
+                                <h3 class="menu-item-name">Bánh Bao Xá Xíu</h3>
+                                <div class="menu-item-price">55.000đ</div>
+                            </div>
+                            <!-- Item 6 -->
+                            <div class="menu-item">
+                                <div class="menu-item-img-wrap">
+                                    <img src="images/banh_bao.svg" alt="Bánh Bao Kim Sa" class="menu-item-img"
+                                        loading="lazy">
+                                </div>
+                                <h3 class="menu-item-name">Bánh Bao Kim Sa</h3>
+                                <div class="menu-item-price">58.000đ</div>
+                            </div>
+                            <!-- Item 7 -->
+                            <div class="menu-item">
+                                <div class="menu-item-img-wrap">
+                                    <img src="images/banh_bao.svg" alt="Há Cảo Kim Tiền" class="menu-item-img"
+                                        loading="lazy">
+                                </div>
+                                <h3 class="menu-item-name">Há Cảo Kim Tiền</h3>
+                                <div class="menu-item-price">75.000đ</div>
+                            </div>
+                            <!-- Item 8 -->
+                            <div class="menu-item">
+                                <div class="menu-item-img-wrap">
+                                    <img src="images/banh_bao.svg" alt="Bánh Cuốn Tôm" class="menu-item-img"
+                                        loading="lazy">
+                                </div>
+                                <h3 class="menu-item-name">Bánh Cuốn Tôm</h3>
+                                <div class="menu-item-price">60.000đ</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Other Empty Panes -->
+                    <div class="menu-pane" id="tab-chien">
+                        <p class="menu-empty-message">Thực đơn Dimsum chiên đang được cập nhật...</p>
+                    </div>
+                    <div class="menu-pane" id="tab-monchinh">
+                        <p class="menu-empty-message">Thực đơn Món Chính đang được cập nhật...</p>
+                    </div>
+                    <div class="menu-pane" id="tab-mi">
+                        <p class="menu-empty-message">Thực đơn Cơm / Mỳ đang được cập nhật...</p>
+                    </div>
+                    <div class="menu-pane" id="tab-trangmieng">
+                        <p class="menu-empty-message">Thực đơn Tráng Miệng đang được cập nhật...</p>
+                    </div>
+                    <div class="menu-pane" id="tab-douong">
+                        <div class="menu-grid">
+                            <!-- Item 1 -->
+                            <div class="menu-item">
+                                <div class="menu-item-img-wrap">
+                                    <img src="images/banh_bao.svg" alt="Trà Sâm Dứa" class="menu-item-img"
+                                        loading="lazy">
+                                </div>
+                                <h3 class="menu-item-name">Trà Sâm Dứa</h3>
+                                <div class="menu-item-price">15.000đ</div>
+                            </div>
+                            <!-- Item 2 -->
+                            <div class="menu-item">
+                                <div class="menu-item-img-wrap">
+                                    <img src="images/banh_bao.svg" alt="Trà Đá" class="menu-item-img" loading="lazy">
+                                </div>
+                                <h3 class="menu-item-name">Trà Đá</h3>
+                                <div class="menu-item-price">5.000đ</div>
+                            </div>
+                            <!-- Item 3 -->
+                            <div class="menu-item">
+                                <div class="menu-item-img-wrap">
+                                    <img src="images/banh_bao.svg" alt="Nước Ép Dưa Hấu" class="menu-item-img"
+                                        loading="lazy">
+                                </div>
+                                <h3 class="menu-item-name">Nước Ép Dưa Hấu</h3>
+                                <div class="menu-item-price">35.000đ</div>
+                            </div>
+                            <!-- Item 4 -->
+                            <div class="menu-item">
+                                <div class="menu-item-img-wrap">
+                                    <img src="images/banh_bao.svg" alt="Sữa Đậu Nành" class="menu-item-img"
+                                        loading="lazy">
+                                </div>
+                                <h3 class="menu-item-name">Sữa Đậu Nành</h3>
+                                <div class="menu-item-price">20.000đ</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trang 4: Khuyến Mãi -->
+        <section id="promotions" class="promo-section">
+            <!-- Decorative background elements -->
+            <div class="promo-bg-pattern"></div>
+            <div class="promo-lantern promo-lantern-left"></div>
+            <div class="promo-lantern promo-lantern-right"></div>
+
+            <div class="promo-wrapper">
+                <!-- Section Title -->
+                <div class="promo-title-block">
+                    <div class="promo-title-ornament left"></div>
+                    <h2 class="promo-title">Chương Trình Khuyến Mại</h2>
+                    <div class="promo-title-ornament right"></div>
+                </div>
+
+
+                <!-- Carousel Container -->
+                <div class="promo-carousel-wrapper">
+                    <!-- Prev Button -->
+                    <button class="promo-nav-btn promo-prev" aria-label="Xem khuyến mãi trước">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m15 18-6-6 6-6" />
+                        </svg>
+                    </button>
+
+                    <!-- Carousel Track -->
+                    <div class="promo-carousel-viewport">
+                        <div class="promo-carousel-track" id="promoTrack">
+                            <!-- Card 1 -->
+                            <div class="promo-card" data-index="0">
+                                <div class="promo-card-inner">
+                                    <div class="promo-card-glow"></div>
+                                    <div class="promo-card-border"></div>
+                                    <div class="promo-poster-wrap">
+                                        <img src="images/Discount1.jpg" alt="Khuyến mãi - Ngày Vía Thần Tài"
+                                            class="promo-poster" loading="lazy">
+                                    </div>
+                                    <a href="#contact" class="promo-cta-btn">
+                                        <span class="promo-cta-text">Đặt Bàn Ngay</span>
+                                        <svg class="promo-cta-arrow" width="18" height="18" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path d="m9 18 6-6-6-6" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Card 2 -->
+                            <div class="promo-card" data-index="1">
+                                <div class="promo-card-inner">
+                                    <div class="promo-card-glow"></div>
+                                    <div class="promo-card-border"></div>
+                                    <div class="promo-poster-wrap">
+                                        <img src="images/Discount2.jpg" alt="Khuyến mãi - Mở Bán Xuyên Tết"
+                                            class="promo-poster" loading="lazy">
+                                    </div>
+                                    <a href="#contact" class="promo-cta-btn">
+                                        <span class="promo-cta-text">Đặt Bàn Ngay</span>
+                                        <svg class="promo-cta-arrow" width="18" height="18" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path d="m9 18 6-6-6-6" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Card 3 -->
+                            <div class="promo-card" data-index="2">
+                                <div class="promo-card-inner">
+                                    <div class="promo-card-glow"></div>
+                                    <div class="promo-card-border"></div>
+                                    <div class="promo-poster-wrap">
+                                        <img src="images/Discount3.jpg" alt="Khuyến mãi - Valentine's Day"
+                                            class="promo-poster" loading="lazy">
+                                    </div>
+                                    <a href="#contact" class="promo-cta-btn">
+                                        <span class="promo-cta-text">Đặt Bàn Ngay</span>
+                                        <svg class="promo-cta-arrow" width="18" height="18" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path d="m9 18 6-6-6-6" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Card 4 -->
+                            <div class="promo-card" data-index="3">
+                                <div class="promo-card-inner">
+                                    <div class="promo-card-glow"></div>
+                                    <div class="promo-card-border"></div>
+                                    <div class="promo-poster-wrap">
+                                        <img src="images/Discount4.jpg" alt="Khuyến mãi - Đánh Giá GG Map Giảm 5%"
+                                            class="promo-poster" loading="lazy">
+                                    </div>
+                                    <a href="#contact" class="promo-cta-btn">
+                                        <span class="promo-cta-text">Đặt Bàn Ngay</span>
+                                        <svg class="promo-cta-arrow" width="18" height="18" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path d="m9 18 6-6-6-6" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Card 5 -->
+                            <div class="promo-card" data-index="4">
+                                <div class="promo-card-inner">
+                                    <div class="promo-card-glow"></div>
+                                    <div class="promo-card-border"></div>
+                                    <div class="promo-poster-wrap">
+                                        <img src="images/Discount5.jpg" alt="Khuyến mãi - Ông Công Ông Táo"
+                                            class="promo-poster" loading="lazy">
+                                    </div>
+                                    <a href="#contact" class="promo-cta-btn">
+                                        <span class="promo-cta-text">Đặt Bàn Ngay</span>
+                                        <svg class="promo-cta-arrow" width="18" height="18" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path d="m9 18 6-6-6-6" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Card 6 -->
+                            <div class="promo-card" data-index="5">
+                                <div class="promo-card-inner">
+                                    <div class="promo-card-glow"></div>
+                                    <div class="promo-card-border"></div>
+                                    <div class="promo-poster-wrap">
+                                        <img src="images/Discount6.jpg" alt="Khuyến mãi - Tích Điểm Nhận Quà"
+                                            class="promo-poster" loading="lazy">
+                                    </div>
+                                    <a href="#contact" class="promo-cta-btn">
+                                        <span class="promo-cta-text">Đặt Bàn Ngay</span>
+                                        <svg class="promo-cta-arrow" width="18" height="18" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path d="m9 18 6-6-6-6" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Next Button -->
+                    <button class="promo-nav-btn promo-next" aria-label="Xem khuyến mãi tiếp">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m9 18 6-6-6-6" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Pagination Dots -->
+                <div class="promo-dots" id="promoDots">
+                    <span class="promo-dot active" data-slide="0"></span>
+                    <span class="promo-dot" data-slide="1"></span>
+                    <span class="promo-dot" data-slide="2"></span>
+                    <span class="promo-dot" data-slide="3"></span>
+                    <span class="promo-dot" data-slide="4"></span>
+                    <span class="promo-dot" data-slide="5"></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trang 5: Contact -->
+        <section id="contact" class="full-page contact-section">
+            <!-- Decorative wave top -->
+            <div class="contact-wave-top"></div>
+
+            <div class="contact-wrapper">
+                <!-- Section Title -->
+                <div class="contact-title-block">
+                    <div class="contact-title-ornament left"></div>
+                    <h2 class="contact-title">Thông Tin Liên Hệ</h2>
+                    <div class="contact-title-ornament right"></div>
+                </div>
+
+                <!-- Hotline -->
+                <div class="contact-hotline">
+                    <span class="hotline-icon">📞</span>
+                    <div class="hotline-info">
+                        <span class="hotline-label">HOTLINE:</span>
+                        <a href="tel:0336891298" class="hotline-number">033 689 1298</a>
+                    </div>
+                </div>
+
+                <!-- Main Content: 2 columns -->
+                <div class="contact-content">
+                    <!-- Left: Branch List -->
+                    <div class="contact-branches">
+                        <h3 class="branches-heading">Danh Sách Các Cơ Sở Tại Hà Nội:</h3>
+
+                        <div class="branches-list">
+                            <div class="branch-card active" data-branch="1"
+                                data-map="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.451768522772!2d105.85807472540226!3d21.014602200973357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab551f6d7397%3A0xade05ef4ec6ae0f6!2zRnVuZ2hhIERpbXN1bSAtIDEyIE5ndXnhu4VuIEPDtG5nIFRy4bup!5e0!3m2!1svi!2svn!4v1"
+                                data-lat="21.0146" data-lng="105.8581">
+                                <div class="branch-number">01</div>
+                                <div class="branch-info">
+                                    <div class="branch-name">Fungha Dimsum - Nguyễn Công Trứ</div>
+                                    <div class="branch-address">
+                                        <span class="branch-icon">📍</span>
+                                        12 Nguyễn Công Trứ, Phạm Đình Hổ, Hai Bà Trưng, Hà Nội
+                                    </div>
+                                    <div class="branch-phone">
+                                        <span class="branch-icon">📱</span>
+                                        <a href="tel:0376612212">0376.612.212</a>
+                                    </div>
+                                </div>
+                                <div class="branch-arrow">›</div>
+                            </div>
+
+                            <div class="branch-card" data-branch="2"
+                                data-map="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.754751430048!2d105.84040117540306!3d21.044498300311753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab6dbfeef981%3A0x807792025b010508!2zRnVuZ2hhIERpbXN1bSAtIEPhu61hIELhuq9j!5e0!3m2!1svi!2svn!4v1"
+                                data-lat="21.0445" data-lng="105.8404">
+                                <div class="branch-number">02</div>
+                                <div class="branch-info">
+                                    <div class="branch-name">Fungha Dimsum - Cửa Bắc</div>
+                                    <div class="branch-address">
+                                        <span class="branch-icon">📍</span>
+                                        39 Cửa Bắc, Trúc Bạch, Ba Đình, Hà Nội
+                                    </div>
+                                    <div class="branch-phone">
+                                        <span class="branch-icon">📱</span>
+                                        <a href="tel:0336891298">033.689.1298</a>
+                                    </div>
+                                </div>
+                                <div class="branch-arrow">›</div>
+                            </div>
+
+                            <div class="branch-card" data-branch="3"
+                                data-map="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119209.0078341522!2d105.7718272!3d20.9813504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab004e31aa05%3A0xff31bb45baa0bd4!2zRnVuZ2hhIERpbXN1bSAtIDI4IFbFqSBQaOG6oW0gSMOgbQ!5e0!3m2!1sen!2s!4v1772801632295!5m2!1sen!2s"
+                                data-lat="20.9814" data-lng="105.7718">
+                                <div class="branch-number">03</div>
+                                <div class="branch-info">
+                                    <div class="branch-name">Fungha Dimsum - Vũ Phạm Hàm</div>
+                                    <div class="branch-address">
+                                        <span class="branch-icon">📍</span>
+                                        28 Vũ Phạm Hàm, Trung Hoà, Cầu Giấy, Hà Nội
+                                    </div>
+                                    <div class="branch-phone">
+                                        <span class="branch-icon">📱</span>
+                                        <a href="tel:0336891298">033.689.1298</a>
+                                    </div>
+                                </div>
+                                <div class="branch-arrow">›</div>
+                            </div>
+
+                            <div class="branch-card" data-branch="4"
+                                data-map="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4583.73578301122!2d105.7807128!3d20.9848273!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313453d1d7f90701%3A0x4201d7971a211cc1!2zRnVuZ0hhIERpbXN1bSAtIEjDoCDEkMO0bmc!5e1!3m2!1sen!2s!4v1772801656522!5m2!1sen!2s"
+                                data-lat="20.9848" data-lng="105.7807">
+                                <div class="branch-number">04</div>
+                                <div class="branch-info">
+                                    <div class="branch-name">FungHa Dimsum - Hà Đông</div>
+                                    <div class="branch-address">
+                                        <span class="branch-icon">📍</span>
+                                        Hà Đông, Hà Nội
+                                    </div>
+                                    <div class="branch-phone">
+                                        <span class="branch-icon">📱</span>
+                                        <a href="tel:0336891298">033.689.1298</a>
+                                    </div>
+                                </div>
+                                <div class="branch-arrow">›</div>
+                            </div>
+
+                            <div class="branch-card" data-branch="5"
+                                data-map="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d74203.2642009938!2d105.7449896!3d20.965085!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ad8f63991bd3%3A0x1dd7f17a3607b7a8!2sFungha%20Dimsum%20-%20T%C3%A2y%20Nam%20Linh%20%C4%90%C3%A0m!5e1!3m2!1svi!2s!4v1773290150171!5m2!1svi!2s"
+                                data-lat="20.965085" data-lng="105.7449896">
+                                <div class="branch-number">05</div>
+                                <div class="branch-info">
+                                    <div class="branch-name">Fungha Dimsum - Tây Nam Linh Đàm</div>
+                                    <div class="branch-address">
+                                        <span class="branch-icon">📍</span>
+                                        Tây Nam Linh Đàm, Hoàng Mai, Hà Nội
+                                    </div>
+                                    <div class="branch-phone">
+                                        <span class="branch-icon">📱</span>
+                                        <a href="tel:0336891298">033.689.1298</a>
+                                    </div>
+                                </div>
+                                <div class="branch-arrow">›</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Google Maps -->
+                    <div class="contact-map-container">
+                        <div class="map-frame">
+                            <iframe id="contact-map"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.451768522772!2d105.85807472540226!3d21.014602200973357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab551f6d7397%3A0xade05ef4ec6ae0f6!2zRnVuZ2hhIERpbXN1bSAtIDEyIE5ndXnhu4VuIEPDtG5nIFRy4bup!5e0!3m2!1svi!2svn!4v1"
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                        <div class="map-branch-label" id="map-branch-label">
+                            <span class="map-label-icon">📍</span>
+                            <span class="map-label-text">Fungha Dimsum - Nguyễn Công Trứ</span>
+                            <a class="map-label-link" id="map-gg-link"
+                                href="https://maps.google.com/?q=21.0146,105.8581" target="_blank" rel="noopener"
+                                title="Mở Google Maps">⇗</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Decorative wave bottom -->
+            <div class="contact-wave-bottom"></div>
+        </section>
+
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer id="footer" class="site-footer">
+        <!-- Decorative Top Border -->
+        <div class="footer-ornament">
+            <div class="footer-ornament-line"></div>
+            <div class="footer-ornament-icon">
+                <svg viewBox="0 0 40 40" width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="20" cy="20" r="18" stroke="#FFD700" stroke-width="1.5" opacity="0.6" />
+                    <circle cx="20" cy="20" r="12" stroke="#FFD700" stroke-width="1" opacity="0.4" />
+                </svg>
+            </div>
+            <div class="footer-ornament-line"></div>
+        </div>
+
+        <div class="footer-content">
+            <!-- Column 1: Brand Info -->
+            <div class="footer-col footer-brand">
+                <div class="footer-logo">
+                    <img src="images/logo.png" alt="Fungha Dimsum Logo" width="56" height="56">
+                    <span class="footer-logo-text">Fungha Dimsum</span>
+                </div>
+                <p class="footer-tagline">Tinh Hoa Dimsum — Hương Vị Truyền Thống</p>
+                <div class="footer-hours">
+                    <div class="footer-hours-title">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFD700" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <polyline points="12 6 12 12 16 14" />
+                        </svg>
+                        <span>Giờ mở cửa</span>
+                    </div>
+                    <p class="footer-hours-detail">Hàng ngày: 10:00 — 22:00</p>
+                </div>
+            </div>
+
+
+            <!-- Column 3: Contact & Social -->
+            <div class="footer-col footer-social-col">
+                <h4 class="footer-col-title">Kết Nối Với Chúng Tôi</h4>
+                <div class="footer-contact-info">
+                    <a href="tel:0336891298" class="footer-contact-item">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFD700" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
+                        </svg>
+                        <span>033 689 1298</span>
+                    </a>
+                    <a href="mailto:funghadimsum@gmail.com" class="footer-contact-item">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFD700" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <rect width="20" height="16" x="2" y="4" rx="2" />
+                            <path d="m22 7-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7" />
+                        </svg>
+                        <span>funghadimsum@gmail.com</span>
+                    </a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/funghadimsum" target="_blank" rel="noopener" aria-label="Facebook"
+                        class="footer-social-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/funghadimsum" target="_blank" rel="noopener"
+                        aria-label="Instagram" class="footer-social-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                        </svg>
+                    </a>
+                    <a href="https://zalo.me/0336891298" target="_blank" rel="noopener" aria-label="Zalo"
+                        class="footer-social-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.568 14.163c-.18.348-.634.696-1.094.91-.461.213-1.096.305-1.717.073-.386-.145-.868-.405-1.28-.695-.275-.194-.537-.405-.77-.628a.122.122 0 01.003-.176l.625-.57a.122.122 0 01.166.002c.383.371.823.72 1.277.886.273.1.558.077.787-.019.23-.095.357-.256.403-.423.046-.167.02-.339-.105-.493-.268-.33-.746-.562-1.207-.87-.461-.309-.907-.698-1.162-1.244-.255-.546-.253-1.222.068-1.79.322-.568.87-.992 1.544-1.194.675-.202 1.451-.161 2.118.172.458.229.838.564 1.11.94a.122.122 0 01-.023.166l-.674.51a.122.122 0 01-.17-.022c-.208-.285-.476-.502-.78-.64-.39-.177-.835-.2-1.195-.09-.36.11-.608.34-.725.613-.116.273-.09.571.116.84.28.364.735.588 1.196.883.461.294.931.66 1.2 1.205.268.546.256 1.22-.069 1.789zM8.83 8.627h3.472a.122.122 0 01.122.122v.808a.122.122 0 01-.122.122H9.959v.855h2.147a.122.122 0 01.122.122v.793a.122.122 0 01-.122.122H9.959v.88h2.343a.122.122 0 01.122.123v.808a.122.122 0 01-.122.122H8.83a.122.122 0 01-.122-.122V8.749a.122.122 0 01.122-.122zm-3.15 0h.93a.122.122 0 01.122.122v3.383h1.928a.122.122 0 01.122.122v.808a.122.122 0 01-.122.122H5.68a.122.122 0 01-.122-.122V8.749a.122.122 0 01.122-.122z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.tiktok.com/@funghadimsum" target="_blank" rel="noopener" aria-label="TikTok"
+                        class="footer-social-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright Bar -->
+        <div class="footer-bottom">
+            <div class="footer-bottom-ornament"></div>
+            <p>&copy; 2026 Fungha Dimsum. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- ========== FLOATING BÁNH BAO BUTTON ========== -->
+    <a href="#contact" class="bao-float-btn" id="baoBaoBtn" aria-label="Đi tới trang Liên Hệ">
+        <div class="bao-steam">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <!-- Inline SVG bánh bao - no background -->
+        <svg class="bao-img" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <!-- Shadow -->
+            <ellipse cx="50" cy="92" rx="26" ry="5" fill="rgba(0,0,0,0.18)" />
+            <!-- Body -->
+            <ellipse cx="50" cy="62" rx="34" ry="28" fill="url(#baoGrad)" />
+            <!-- Top dome -->
+            <ellipse cx="50" cy="50" rx="28" ry="22" fill="url(#baoTopGrad)" />
+            <!-- Pleats -->
+            <path d="M50 30 Q44 36 46 42 Q50 38 54 42 Q56 36 50 30Z" fill="url(#pleatGrad)" opacity="0.7" />
+            <path d="M50 30 Q56 33 57 40 Q53 37 50 38 Q47 37 43 40 Q44 33 50 30Z" fill="rgba(255,255,255,0.5)" />
+            <!-- Highlight -->
+            <ellipse cx="41" cy="44" rx="8" ry="5" fill="rgba(255,255,255,0.45)" transform="rotate(-20,41,44)" />
+            <ellipse cx="44" cy="42" rx="3" ry="2" fill="rgba(255,255,255,0.7)" transform="rotate(-20,44,42)" />
+            <!-- Top knot -->
+            <ellipse cx="50" cy="29" rx="5" ry="4" fill="url(#knotGrad)" />
+            <ellipse cx="50" cy="27" rx="3" ry="2" fill="rgba(255,255,255,0.6)" />
+            <defs>
+                <radialGradient id="baoGrad" cx="45%" cy="40%" r="60%">
+                    <stop offset="0%" stop-color="#FFFEF8" />
+                    <stop offset="60%" stop-color="#F5F0E8" />
+                    <stop offset="100%" stop-color="#E8DDD0" />
+                </radialGradient>
+                <radialGradient id="baoTopGrad" cx="40%" cy="35%" r="65%">
+                    <stop offset="0%" stop-color="#FFFFFF" />
+                    <stop offset="55%" stop-color="#F8F3EA" />
+                    <stop offset="100%" stop-color="#EDE4D8" />
+                </radialGradient>
+                <radialGradient id="pleatGrad" cx="50%" cy="50%" r="60%">
+                    <stop offset="0%" stop-color="#EDE4D8" />
+                    <stop offset="100%" stop-color="#D5C8B8" />
+                </radialGradient>
+                <radialGradient id="knotGrad" cx="40%" cy="35%" r="65%">
+                    <stop offset="0%" stop-color="#FFFFFF" />
+                    <stop offset="100%" stop-color="#DEDAD2" />
+                </radialGradient>
+            </defs>
+        </svg>
+        <div class="bao-tooltip">📞 Liên Hệ Ngay</div>
+    </a>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

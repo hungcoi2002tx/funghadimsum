@@ -1,0 +1,37 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <!-- Shadow -->
+    <ellipse cx="50" cy="92" rx="26" ry="5" fill="rgba(0,0,0,0.18)" />
+    <!-- Body -->
+    <ellipse cx="50" cy="62" rx="34" ry="28" fill="url(#baoGrad)" />
+    <!-- Top dome -->
+    <ellipse cx="50" cy="50" rx="28" ry="22" fill="url(#baoTopGrad)" />
+    <!-- Pleats -->
+    <path d="M50 30 Q44 36 46 42 Q50 38 54 42 Q56 36 50 30Z" fill="url(#pleatGrad)" opacity="0.7" />
+    <path d="M50 30 Q56 33 57 40 Q53 37 50 38 Q47 37 43 40 Q44 33 50 30Z" fill="rgba(255,255,255,0.5)" />
+    <!-- Highlight -->
+    <ellipse cx="41" cy="44" rx="8" ry="5" fill="rgba(255,255,255,0.45)" transform="rotate(-20,41,44)" />
+    <ellipse cx="44" cy="42" rx="3" ry="2" fill="rgba(255,255,255,0.7)" transform="rotate(-20,44,42)" />
+    <!-- Top knot -->
+    <ellipse cx="50" cy="29" rx="5" ry="4" fill="url(#knotGrad)" />
+    <ellipse cx="50" cy="27" rx="3" ry="2" fill="rgba(255,255,255,0.6)" />
+    <defs>
+        <radialGradient id="baoGrad" cx="45%" cy="40%" r="60%">
+            <stop offset="0%" stop-color="#FFFEF8" />
+            <stop offset="60%" stop-color="#F5F0E8" />
+            <stop offset="100%" stop-color="#E8DDD0" />
+        </radialGradient>
+        <radialGradient id="baoTopGrad" cx="40%" cy="35%" r="65%">
+            <stop offset="0%" stop-color="#FFFFFF" />
+            <stop offset="55%" stop-color="#F8F3EA" />
+            <stop offset="100%" stop-color="#EDE4D8" />
+        </radialGradient>
+        <radialGradient id="pleatGrad" cx="50%" cy="50%" r="60%">
+            <stop offset="0%" stop-color="#EDE4D8" />
+            <stop offset="100%" stop-color="#D5C8B8" />
+        </radialGradient>
+        <radialGradient id="knotGrad" cx="40%" cy="35%" r="65%">
+            <stop offset="0%" stop-color="#FFFFFF" />
+            <stop offset="100%" stop-color="#DEDAD2" />
+        </radialGradient>
+    </defs>
+</svg>

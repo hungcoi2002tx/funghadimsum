@@ -1,0 +1,302 @@
+/* ================================================
+   HERO SLIDER PRO MAX (FULL BLEED CINEMATIC)
+   ================================================ */
+#hero.hero-slider-section {
+    position: relative;
+    padding: 0;
+    margin-top: 0;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+    overflow: hidden;
+    /* Use 100dvh for mobile support, fallback to 100vh */
+    height: 100vh;
+    height: 100dvh;
+    scroll-snap-align: start;
+}
+
+.hero-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+/* Cinematic fade + slight zoom effect */
+.hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    z-index: 0;
+    transition: opacity 1.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-slide.active {
+    opacity: 1;
+    z-index: 1;
+    animation: kenBurns 12s cubic-bezier(0.2, 0, 0.1, 1) forwards;
+}
+
+@keyframes kenBurns {
+    0% {
+        transform: scale(1.08);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Gradient overlay - subtly darker at top for header visibility */
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at center, transparent 35%, rgba(0, 0, 0, 0.3) 120%),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.15) 20%, transparent 60%, rgba(0, 0, 0, 0.7) 100%);
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Glassmorphism Navigation Controls */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(15, 15, 15, 0.25);
+    color: #FFD700;
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 5;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 0 15px rgba(255, 215, 0, 0.05);
+}
+
+.slider-btn:hover {
+    background: rgba(30, 30, 30, 0.5);
+    color: #FFF8DC;
+    border-color: rgba(255, 215, 0, 0.8);
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 215, 0, 0.3);
+}
+
+.slider-btn:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+.slider-prev {
+    left: 40px;
+}
+
+.slider-next {
+    right: 40px;
+}
+
+/* Modern Expanding Dot Pagination */
+.slider-dots {
+    position: absolute;
+    bottom: 48px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+    z-index: 5;
+    padding: 12px 24px;
+    background: rgba(10, 10, 10, 0.4);
+    border-radius: 40px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.slider-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slider-dot:hover {
+    background: rgba(255, 215, 0, 0.8);
+    box-shadow: 0 0 8px rgba(255, 215, 0, 0.4);
+}
+
+.slider-dot.active {
+    width: 38px;
+    background: linear-gradient(90deg, #FFD700, #E3B04B);
+    box-shadow: 0 0 16px rgba(255, 215, 0, 0.5);
+}
+
+/* --- BEAUTIFUL RESPONSIVE MOBILE --- */
+@media (max-width: 1024px) {
+    .slider-btn {
+        width: 50px;
+        height: 50px;
+    }
+
+    .slider-prev {
+        left: 24px;
+    }
+
+    .slider-next {
+        right: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Full-bleed cover on mobile with properly sized portrait images */
+    .hero-slide {
+        background-size: cover;
+        background-position: center;
+    }
+
+    /* Subtle Ken Burns on mobile */
+    .hero-slide.active {
+        animation: kenBurns 12s cubic-bezier(0.2, 0, 0.1, 1) forwards;
+    }
+
+    /* Dark fallback while images load */
+    #hero.hero-slider-section {
+        background: #0d0404;
+    }
+
+    /* Lighter overlay — let mobile images breathe & pop */
+    .hero-overlay {
+        background:
+            linear-gradient(to bottom,
+                rgba(0, 0, 0, 0.55) 0%,
+                rgba(0, 0, 0, 0.1) 12%,
+                transparent 50%,
+                rgba(0, 0, 0, 0.5) 100%);
+    }
+
+    /* Smaller, more subtle buttons — don't block the image */
+    .slider-btn {
+        width: 36px;
+        height: 36px;
+        background: rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(255, 215, 0, 0.25);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        top: auto;
+        bottom: 90px;
+        transform: none;
+    }
+
+    .slider-btn:hover {
+        transform: scale(1.05);
+    }
+
+    .slider-btn:active {
+        transform: scale(0.95);
+    }
+
+    .slider-btn svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .slider-prev {
+        left: 24px;
+    }
+
+    .slider-next {
+        right: 24px;
+    }
+
+    /* Dots: cleaner, closer to bottom */
+    .slider-dots {
+        bottom: 28px;
+        padding: 8px 18px;
+        gap: 10px;
+        background: rgba(0, 0, 0, 0.35);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .slider-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 4px;
+    }
+
+    .slider-dot.active {
+        width: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .slider-btn {
+        width: 32px;
+        height: 32px;
+        border-color: rgba(255, 215, 0, 0.2);
+        bottom: 80px;
+    }
+
+    .slider-btn svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    .slider-prev {
+        left: 16px;
+    }
+
+    .slider-next {
+        right: 16px;
+    }
+
+    .slider-dots {
+        bottom: 24px;
+        padding: 7px 14px;
+        border-radius: 24px;
+        gap: 8px;
+    }
+
+    .slider-dot {
+        width: 7px;
+        height: 7px;
+    }
+
+    .slider-dot.active {
+        width: 24px;
+    }
+}
+
+/* Accessibility: respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+    .hero-slide {
+        transition: opacity 0.5s ease;
+    }
+
+    .hero-slide.active {
+        animation: none;
+    }
+}
+
+/* ================================================

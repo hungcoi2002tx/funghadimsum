@@ -1,0 +1,77 @@
+5: CSS Variables / Design Tokens
+42: Reset & Base
+140: Utility
+291: Header Base (Chinese Theme)
+347: Header Inner
+364: Logo
+484: Navbar
+537: Section Content
+557: Hamburger Button
+604: Responsive: Large Laptops / Zoom (max 1600px)
+625: Responsive: Laptops (max 1280px)
+663: Responsive: Tablet (max 1024px)
+701: Responsive: Mobile (max 768px)
+711: Backdrop overlay
+725: Slide-in drawer from the RIGHT
+786: Nav links vertical stack
+875: Header bar
+919: Responsive: Small Mobile (max 480px)
+959: Mobile Nav Backdrop
+1215: Responsive: Tablet
+1223: Responsive: Mobile
+1250: Responsive: Small Mobile
+1412: BEAUTIFUL RESPONSIVE MOBILE
+1524: Title (matches Contact section exactly)
+1588: Hero Row: Image + Intro
+1632: Intro Column
+1673: Stats Row
+1721: Feature Cards (3-column grid)
+1805: About Responsive: Tablet
+1829: About Responsive: Mobile
+1901: About Responsive: Small Mobile
+1955: Section base
+1982: Contact wrapper
+1992: Light Panel pseudo-element disabled
+1997: Title
+2059: Hotline
+2151: Content Layout
+2159: Branches
+2231: Branch Card
+2353: Google Maps
+2447: Contact Responsive: Tablet
+2469: Contact Responsive: Mobile
+2583: Contact Responsive: Small Mobile
+2740: Promotions Wrapper
+2749: Title
+2811: Carousel Wrapper
+2819: Navigation Buttons
+2851: Carousel Viewport & Track
+2865: Promo Card
+2884: Center Card Floating Animation
+2943: Golden Sparkle Particles for Center Card
+3011: Spotlight Beam on Center Card
+3167: Poster Image
+3216: CTA Button
+3276: Pagination Dots
+3320: Promotions Responsive: Tablet
+3355: Promotions Responsive: Mobile
+3427: Promotions Responsive: Small Mobile
+3463: Promo Scroll-In Animation
+3482: Reduced Motion Support
+3545: Decorative Ornament Divider
+3576: Footer Content Grid
+3589: Column Styles
+3613: Brand Column
+3676: Links Column
+3716: Social Column
+3772: Copyright Bottom Bar
+3798: Footer Responsive: Tablet
+3811: Footer Responsive: Mobile
+3879: Footer Responsive: Small Mobile
+3924: Title (Matches About & Contact)
+3999: Tabs Navigation
+4084: Tabs Content & Grid
+4206: Responsive Menu
+4328: HEADER: Force desktop layout at all sizes
+4450: HERO SECTION: Force desktop layout
+4498: ABOUT SECTION: Force desktop layout at all sizes
